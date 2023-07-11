@@ -19,7 +19,7 @@ class UserEntity extends Entity
     ];
     
     // Hash password whenever it is set.
-    public function setPassword(string $pass){
+    protected function setPassword(string $pass){
         $this->attributes['password'] = password_hash($pass, PASSWORD_BCRYPT);
         return $this;
     }
