@@ -36,6 +36,10 @@ class CreateCommentsTable extends Migration
                 'type'=>'TIMESTAMP',
                 'null'=>true,
             ],
+            'deleted_at' => [
+                'type' => 'TIMESTAMP',
+                'null' => true,
+            ],
         ]);
         $this->forge->addKey('id',true);
         $this->forge->addForeignKey('user_id','users','id','CASCADE','CASCADE');
